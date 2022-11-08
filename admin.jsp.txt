@@ -1,0 +1,38 @@
+
+   
+
+<%@page import="java.sql.ResultSet"%>
+<%@page import="gnaction.AdminAction"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <table>
+            <tr><th>NAME</th><th>EMAIL</th><th>MOBILE</th><th>DOB</th><th>PASSWORD</th><th>DELETE USER</th></tr>
+        <%
+        AdminAction ac=new AdminAction();
+        
+        ResultSet rs=ac.getUserData();
+        
+       while(rs.next())
+       {
+          %>
+            <tr><td><%=rs.getString(1)%></td><td><%=rs.getString(2)%></td><td><%=rs.getLong(3)%></td><td><%=rs.getDate(4)%></td><td><%=rs.getString(5)%></td><td>[DELETE]</td></tr>  
+            
+            
+            
+            <%
+       }
+        
+        
+        
+        
+        
+        %>
+        </table>
+    </body>
+</html>

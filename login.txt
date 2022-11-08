@@ -1,0 +1,37 @@
+
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>LOG IN</title>
+        <link rel="stylesheet" type="text/css" href="css/botstrap.css">
+	<script type="js/botstrap.js"></script>
+	<script type="js/jquery.js"></script>
+    </head>
+     <body>
+         
+     <center>  <form method="post"  action="LoginServlet">
+           <fieldset  style="width: 400px; margin-top: 180px">
+    <legend style="text-align: center">
+        <img src="img/login.jpg" style="border-radius: 70px; height: 60px; width: 60px"></legend>
+     
+       <div class="from-group">
+           <label>Email or Mobile</label>
+           <input type="text" name="user" class="form-control">
+       </div>
+       <div class="from-group" style="margin-top: 18px; margin-left: 45px">
+           <label>Password</label>
+           <input type="password" name="pwd" class="form-control">
+       </div>
+       <div class="from-group" style="margin-top: 18px; margin-left: 75px">
+          
+           <input type="submit" name="login" class="btn btn-lg btn-success">
+           <a href="signup.jsp">Sign Up</a>
+            <a href="regmobile.jsp">Forget Password</a>
+       </div>
+         </fieldset>
+         </form></center>
+    </body>
+</html>
